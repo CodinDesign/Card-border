@@ -1,2 +1,13 @@
 # Card-border
-Exemplo basico, de animação na borda do item selecionado.
+
+## Funções:
+
+- Exbibe uma animação na borda do obejto;
+- Titulo com animação no background.
+
+## Informações adicionais:
+
++ Feito por CodinDesign;
++ Feito por celular;
++ Tecnologias usadas:HTML , CSS;
++ App usado spck Editor.
