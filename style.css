@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #242424;
+  
+}
+
+h1 {
+  font-family: 'Tiny5', serif;
+  letter-spacing: 5px;
+  padding: 30px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3.5em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  z-index: 1;
+  background: linear-gradient(to right, #FF0000 0%, #0A00FF 21%, #00FF05 52%, #BE00FF 78%, #FF005D 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: moveGradient 4s linear infinite;
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.card {
+  width: 400px; 
+  height: 400px; 
+  box-shadow: 10px 14px 20px black;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card::before{
+  content: '';
+  background-image: conic-gradient( #01FF00 20deg, transparent 120deg);
+  height: 200%; 
+  width: 200%; 
+  position: absolute;
+  animation: rotate 2s linear infinite;
+  
+}
+
+.card::after{
+  content:'CodinDesign';
+  width: 380px; 
+  height: 380px; 
+  background: #171717;
+  position: absolute;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #01FF00;
+  font-weight: bold;
+  font-size: 40px;
+  letter-spacing: 3px;
+  box-shadow: inset 20px 20px 20px #000000;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(-360deg);
+  }
+}
